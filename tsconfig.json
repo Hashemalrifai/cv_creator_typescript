@@ -1,0 +1,13 @@
+{
+    "files": [
+        "src/models/*.ts",
+        "src/services/*.ts",
+        "src/infrastructure/*.ts",
+        "src/*.ts",
+        "./test/*.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}
