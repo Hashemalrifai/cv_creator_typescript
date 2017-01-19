@@ -13,7 +13,22 @@ export class CvService {
     }
 
     removeEducation(cv:CV, education:Education) {
-        // todo
+        var index = this.findEducationIndexById(cv, education.id)
+        console.log(index)
+        if (index > -1) {
+            cv.education.splice(index, 1)
+        }
+    }
+
+    findEducationIndexById(cv:CV, id:number) {
+        var index = -1;
+        cv.education.forEach((edu, i) => {
+            if (edu.id == id) {
+                index = i
+            }
+        })
+        
+        return index
     }
 
     printCv(cv:CV, writer:IWriterService) {

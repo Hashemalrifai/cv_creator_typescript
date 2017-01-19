@@ -11,12 +11,18 @@ import { ConsoleWriter } from "./src/services/consoleWriter"
     cvService.addIntroduction(cv, "Hello introduction!")
 
     var edu1 = new Education()
+    edu1.id = 1
     edu1.title = "Secondary School"
     cvService.addEducation(cv, edu1)
 
     var edu2 = new Education()
+    edu2.id = 2
     edu2.title = "Univ."
     cvService.addEducation(cv, edu2)
 
+    cvService.printCv(cv, new ConsoleWriter())
+
+    cvService.removeEducation(cv, edu1);
+    
     cvService.printCv(cv, new ConsoleWriter())
 })()
