@@ -3,8 +3,7 @@
         "src/models/*.ts",
         "src/services/*.ts",
         "src/infrastructure/*.ts",
-        "src/*.ts",
-        "./test/*.ts"
+        "./*.ts"
     ],
     "compilerOptions": {
         "noImplicitAny": true,

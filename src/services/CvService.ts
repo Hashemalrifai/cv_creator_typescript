@@ -17,10 +17,10 @@ export class CvService {
     }
 
     printCv(cv:CV, writer:IWriterService) {
-        console.log(cv.introduction)
+        writer.write(cv.introduction)
 
         cv.education.forEach(edu => {
-            console.log(edu.title)
+            writer.write(edu.title)
         });
     }
 }
